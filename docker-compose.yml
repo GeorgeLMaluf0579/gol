@@ -1,0 +1,26 @@
+services:
+  database:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    env_file:
+      - "development.env"
+  app:
+    build:
+      context: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'"
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    env_file:
+      - "development.env"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - database
+
+volumes:
+  db_data:

@@ -11,8 +11,8 @@
 /db/*.sqlite3-journal
 /db/schema.rb
 /db/schema_cache.dump
-/config/database.yml
-/config/credentials.yml.enc
+# /config/database.yml
+# /config/credentials.yml.enc
 /storage/*
 !/storage/.keep
 /public/assets
