@@ -1,0 +1,14 @@
+<nav>
+  <div class="nav-menu">
+    <%= link_to 'Home', root_path, class: "nav-item" %>
+    <% if user_signed_in? %>
+      <a>Game Boards</a>
+    <% end %>
+  </div>
+
+  <% if user_signed_in? %>
+    <%= link_to 'Logout', destroy_user_session-path, data: { turbo_method: :delete }, class: "nav-btn" %>
+  <% else %>
+    <%= link_to 'Login', new_user_session_path, class: "nav-btn" %>
+  <% end %>
+</nav>

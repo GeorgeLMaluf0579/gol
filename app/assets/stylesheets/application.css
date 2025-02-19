@@ -14,3 +14,10 @@
  *= require_self
  */
 
+header {
+  display: flex;
+  align-self: stretch;
+  width: 100vw;
+  margin-bottom: 2px;
+  height: 48px;
+}
