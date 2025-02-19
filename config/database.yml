@@ -8,16 +8,17 @@ default: &default
 development:
   <<: *default
   database: gol_development
-  username: <%= ENV.fetch("POSTGRES_USER") %>
-  password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
+  username: postgres
+  password: pgsql
+  password: pgsql
   host: localhost
   port: 5432
 
 test:
   <<: *default
   database: gol_test
-  username: <%= ENV.fetch("POSTGRES_USER") %>
-  password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
+  username: postgres
+  password: pgsql
   host: localhost
   port: 5432
 
