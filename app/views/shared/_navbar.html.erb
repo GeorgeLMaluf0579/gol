@@ -2,7 +2,7 @@
   <div class="nav-menu">
     <%= link_to 'Home', root_path, class: "nav-item" %>
     <% if user_signed_in? %>
-      <a>Game Boards</a>
+      <%= link_to 'Games', game_board_states_path, class: "nav-item" %>
     <% end %>
   </div>
 

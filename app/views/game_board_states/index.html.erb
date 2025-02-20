@@ -1,0 +1,37 @@
+<div class="page">
+  <div class="pagetitle">
+    <h2>GameBoards</h2>
+    <%= link_to 'New Game', new_game_board_state_path, class: "nav-btn" %>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Game #</th>
+        <th>Generation</th>
+        <th>Population</th>
+        <th>Last Update</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="6">
+          <h5>No games to list.</h5>
+          <p>Use the 'New Game' to create one</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td><%= "#{Time.current}" %><td>
+        <td>
+          <button class="nav-btn">View</button>
+          &nbsp;
+          <button class="nav-btn">Delete</button>
+        <td>
+    </tbody>
+  </table>
+</div>
+
