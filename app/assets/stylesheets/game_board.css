@@ -5,7 +5,7 @@
   padding: 12px 24px;
 }
 
-.pagetitle {
+.page-title {
   display: flex;
   width: 100%;
   height: 35px;
@@ -15,7 +15,7 @@
   justify-content: flex-start;
 }
 
-.pagetitle h2 {
+.page-title h2 {
   position: fixed;
   left: 24px;
   background: linear-gradient(45deg, #00aba9 25%, #1ba1e2 100%);
@@ -23,7 +23,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.pagetitle a {
+.page-title a {
   position: fixed;
   right: 24px;
 }
