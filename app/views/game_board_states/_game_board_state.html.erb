@@ -1,0 +1,13 @@
+<%= turbo_frame_tag dom_id(@game_board_state), class: "panel-grid-container" do %>
+  <div class="panel-grid" 
+    style="grid-template-columns: repeat(<%= @game_board_state.rows %>, calc(480px / <%= @game_board_state.rows %>));
+    grid-template-row: repeat(<%= @game_board_state.cols %>, calc(480px / <%= @game_board_state.cols %>));">
+    <% @game_board_state.current_state.each do |row| %>
+      <% row.each do |cell| %>
+        <div class="<%=  cell == '*' ? 'live' : 'dead' %>-cell">
+          &nbsp;
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

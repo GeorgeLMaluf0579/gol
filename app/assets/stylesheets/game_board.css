@@ -35,3 +35,47 @@ table {
 table th {
   font-weight: 600;
 }
+
+.panel-board {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.panel-info {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  gap: 5px;
+  width: 340px;
+  background: #ddd;
+}
+
+.panel-board-controls {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.panel-grid-container {
+  display: flex;
+  width: 480px;
+  height: 480px;
+}
+
+.panel-grid {
+  display: grid;
+  background: #000;
+  align-self: stretch;
+}
+
+.live-cell {
+  border: 0.5px solid #b3b3b3;
+  background: #fff;
+}
+
+.dead-cell {
+  border: 0.5px solid #b3b3b3;
+  background: #000;
+}

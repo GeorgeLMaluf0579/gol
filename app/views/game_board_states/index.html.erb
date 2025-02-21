@@ -14,24 +14,27 @@
       </tr>
     </thead>
     <tbody>
+    <% if @game_boards.size == 0%>
       <tr>
         <td colspan="6">
           <h5>No games to list.</h5>
           <p>Use the 'New Game' to create one</p>
         </td>
       </tr>
-
+    <% else %>
+      <% @game_boards.each do |game| %>
       <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td><%= "#{Time.current}" %><td>
-        <td>
-          <button class="nav-btn">View</button>
+        <td style="text-align: right;"><%= "##{game.id}"%></td>
+        <td style="text-align: right;"><%= "#{game.generation}"%></td>
+        <td style="text-align: center;"><%= "#{game.population_count} live cells"%></td>
+        <td style="text-align: center;"><%= Time.current.strftime("%A %d, %b %Y -  %I:%M %p") %><td>
+        <td style="display: flex; flex-direction: row;">
+          <%= link_to 'View', game_board_state_path(game), class: "nav-btn" %>
           &nbsp;
-          <button class="nav-btn">Delete</button>
+          <%= button_to 'Delete', game_board_state_path(game), method: :delete, class: "nav-btn" %> 
         <td>
+      <% end %>
+    <% end %>
     </tbody>
   </table>
 </div>
-

@@ -3,5 +3,9 @@
     <h2>New GameBoard</h2>
   </div>
   <div class="">
+    <%= form_with model: @game_board_state, local: true, multipart: true  do |form| %>
+      <%= form.file_field :input_file, accept: '.txt', required: true %>
+      <%= form.submit "Upload Board" %>
+    <% end %>
   </div>
 </div>

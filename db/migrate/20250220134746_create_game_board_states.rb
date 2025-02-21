@@ -2,6 +2,7 @@ class CreateGameBoardStates < ActiveRecord::Migration[7.2]
   def change
     create_table :game_board_states do |t|
       t.integer :generation
+      t.integer :population_count
       t.integer :rows
       t.integer :cols
       t.jsonb :first_state

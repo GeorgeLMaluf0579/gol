@@ -5,6 +5,6 @@ FactoryBot.define do
     rows { 10 }
     cols { 10 }
     current_state { Array.new(rows) { Array.new(cols, '.') } }
-    initial_state { {} }
+    first_state { {} }
   end
 end

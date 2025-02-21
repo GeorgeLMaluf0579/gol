@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
-  resources :game_board_states
+  resources :game_board_states, except: %i[edit update] do
+    member do
+      patch :reset
+      patch :new_generation
+    end
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

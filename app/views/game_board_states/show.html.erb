@@ -1,0 +1,19 @@
+<div class="page">
+  <div class="page-title">
+    <h2><%= "GameBoard ##{@game_board_state.id}"%></h2>
+    <%= link_to 'Back', game_board_states_path, class: "nav-btn" %>
+  </div>
+  <div class="panel-board">
+    <div class="panel-info">
+      <h5>Details</h5>
+      <p><%= "Generation: #{@game_board_state.generation}" %></p>
+      <p><%= "Live Cells: #{@game_board_state.population_count}" %></p>
+      <div class="panel-board-controls">
+        <%= button_to 'Reset board', reset_game_board_state_path(@game_board_state), method: :patch, class: "nav-btn" %>
+        <%= button_to 'Next Generation', new_generation_game_board_state_path(@game_board_state), method: :patch, class: "nav-btn" %>
+        <%= button_to 'Delete', game_board_state_path(@game_board_state), method: :delete, class: "nav-btn" %> 
+      </div>
+    </div>
+    <%= render @game_board_state %>
+  </div>
+</div>

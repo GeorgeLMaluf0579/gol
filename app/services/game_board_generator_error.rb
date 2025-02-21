@@ -1,0 +1,1 @@
+class GameBoardGeneratorError < StandardError; end
