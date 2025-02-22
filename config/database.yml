@@ -10,14 +10,14 @@ development:
   database: gol_development
   username: <%= ENV.fetch("POSTGRES_USER") %>
   password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
-  url: <%= ENV.fetch("DATABASE_URL")
+  url: <%= ENV.fetch("DATABASE_URL") %>
 
 test:
   <<: *default
   database: gol_test
   username: <%= ENV.fetch("POSTGRES_USER") %>
   password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
-  url: <%= ENV.fetch("DATABASE_URL")
+  url: <%= ENV.fetch("DATABASE_URL") %>
 
 production:
   <<: *default
