@@ -20,7 +20,7 @@ class GameBoardStatesController < ApplicationController
 
   def new_generation
     @game_board_state.new_generation!
-    flash.now[:notice] = "Generation #{@game_board_state.generation} calculated"
+    flash.now[:notice] = "New generation calculated"
     render :update_game_board_state, formats: :turbo_stream
   end
 
@@ -35,7 +35,7 @@ class GameBoardStatesController < ApplicationController
 
   def destroy
     @game_board_state.destroy
-    flash[:notice] = "GameBoard deleted!"
+    flash[:notice] = "Game board deleted!"
     redirect_to game_board_states_path
   end
 

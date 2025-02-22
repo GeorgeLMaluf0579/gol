@@ -36,7 +36,6 @@ class GameBoardGeneratorService
     end
 
   rescue ActiveRecord::RecordInvalid => e
-    debugger
     raise GameBoardGeneratorError, "Failed to save the game board state: #{e.record.errors.full_messages.join(', ')}"
   rescue StandardError => e
     raise GameBoardGeneratorError, "Error while progressing to the next generation: #{e.message}"

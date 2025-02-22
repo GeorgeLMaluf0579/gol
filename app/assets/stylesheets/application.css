@@ -21,3 +21,43 @@ header {
   margin-bottom: 2px;
   height: 48px;
 }
+
+.notice,
+.alert {
+  display: flex;
+  justify-content: space-evely;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  border: 1px solid #000;
+  color: #000;
+  background: #fff;
+  padding: 5px;
+  gap: 10px;
+  right: 24px; 
+}
+
+.notice button,
+.alert button {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  border: none;
+  outline: none;
+}
+
+.alert-color,
+.alert-color button {
+  background: #ff4433 !important;
+  color: white !important;
+  font-size: 32px;
+}
+
+.notice-color,
+.notice-color button {
+  background: #008a00 !important;
+  color: white !important;
+  font-size: 32px;
+}

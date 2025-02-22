@@ -1,0 +1,19 @@
+<%= turbo_frame_tag "notifications" do %>
+  <% flash.each do |key, message| %>
+    <% if key == 'notice' %>
+      <div id="noticeId" class="notice <%=key%>-color">
+        <p><%= message %></p>
+        <button onclick="document.getElementById('noticeId').style.display='none'" class="nav-btn">
+          &times;
+        </span>
+      </div>
+    <% else %>
+      <div id='alertId' class="alert <%=key%>-color">
+        <p><%= message %></p>
+        <button onclick="document.getElementById('alertId').style.display='none'" class="nav-btn">
+          &times;
+        </button>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

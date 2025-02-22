@@ -10,4 +10,9 @@
       <% end %>
     <% end %>
   </div>
+  <div class="panel-info">
+    <h5>Details</h5>
+    <p><%= "Generation: #{@game_board_state.generation}" %></p>
+    <p><%= "Live Cells: #{@game_board_state.population_count}" %></p>
+  </div>
 <% end %>
